@@ -5,11 +5,8 @@ package my.contacteditor;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
@@ -24,7 +21,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
-import javax.swing.border.TitledBorder;
 import org.jdesktop.layout.GroupLayout;
 import org.jdesktop.layout.LayoutStyle;
 
@@ -260,7 +256,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
             int tamanhoVetor;
             int naoEntendi; //0 cres 1 decres
             boolean[] metodosParaComparar = {false, false, false, false, false};// 0 bolha 1 sele ...
-
             tamanhoVetor = Integer.parseInt(cTamVetor.getText());
             if (!Util.validaIntervalo(10000, tamanhoVetor, 50000)) {
                 throw new Exception("O valor nao esta entre 10000 e 50000");
@@ -278,9 +273,7 @@ public class ContactEditorUI extends javax.swing.JFrame {
             if (!Util.validaMetodosSelecionados(metodosParaComparar)) {
                 throw new Exception("Nenhum Metodo Selecionado");
             }
-
             String resultado = Comparar.realizarComparacao(tamanhoVetor, naoEntendi, metodosParaComparar);
-            //Util.mostre(resultado);
             cResultado.setText(resultado);
 
         } catch (NumberFormatException e1) {
