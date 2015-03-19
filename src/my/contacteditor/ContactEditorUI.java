@@ -61,7 +61,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
         cShell = new JCheckBox();
         cHeap = new JCheckBox();
         bComparar = new JButton();
-        jLabel4 = new JLabel();
         jScrollPane2 = new JScrollPane();
         cResultado = new JTextArea();
 
@@ -141,27 +140,12 @@ public class ContactEditorUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new ImageIcon(getClass().getResource("/my/contacteditor/Sem título.png"))); // NOI18N
-
         GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
-                    .add(jPanel1Layout.createSequentialGroup()
-                        .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(jLabel1)
-                                .addPreferredGap(LayoutStyle.RELATED)
-                                .add(cTamVetor))
-                            .add(GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .add(cBolha)
-                                .add(18, 18, 18)
-                                .add(cSelecao)
-                                .addPreferredGap(LayoutStyle.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .add(cInsercao)))
-                        .addContainerGap())
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
                             .add(jPanel1Layout.createSequentialGroup()
@@ -173,15 +157,27 @@ public class ContactEditorUI extends javax.swing.JFrame {
                             .add(jLabel3))
                         .add(0, 0, Short.MAX_VALUE))
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(cShell)
-                        .addPreferredGap(LayoutStyle.UNRELATED)
                         .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
-                            .add(cHeap)
                             .add(jPanel1Layout.createSequentialGroup()
-                                .add(21, 21, 21)
-                                .add(bComparar)))
-                        .addPreferredGap(LayoutStyle.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jLabel4))))
+                                .add(jLabel1)
+                                .addPreferredGap(LayoutStyle.RELATED)
+                                .add(cTamVetor))
+                            .add(GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .add(cBolha)
+                                .add(18, 18, 18)
+                                .add(cSelecao)
+                                .addPreferredGap(LayoutStyle.RELATED, 14, Short.MAX_VALUE)
+                                .add(cInsercao))
+                            .add(jPanel1Layout.createSequentialGroup()
+                                .add(cShell)
+                                .addPreferredGap(LayoutStyle.UNRELATED)
+                                .add(cHeap)
+                                .add(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
+            .add(GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(bComparar)
+                .add(97, 97, 97))
         );
         jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
@@ -195,21 +191,18 @@ public class ContactEditorUI extends javax.swing.JFrame {
                     .add(cCres)
                     .add(cDec))
                 .addPreferredGap(LayoutStyle.UNRELATED)
-                .add(jPanel1Layout.createParallelGroup(GroupLayout.TRAILING)
-                    .add(jPanel1Layout.createSequentialGroup()
-                        .add(jLabel3)
-                        .addPreferredGap(LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
-                            .add(cBolha)
-                            .add(cSelecao)
-                            .add(cInsercao))
-                        .addPreferredGap(LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
-                            .add(cShell)
-                            .add(cHeap))
-                        .addPreferredGap(LayoutStyle.RELATED)
-                        .add(bComparar))
-                    .add(jLabel4))
+                .add(jLabel3)
+                .addPreferredGap(LayoutStyle.UNRELATED)
+                .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
+                    .add(cBolha)
+                    .add(cSelecao)
+                    .add(cInsercao))
+                .addPreferredGap(LayoutStyle.UNRELATED)
+                .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
+                    .add(cShell)
+                    .add(cHeap))
+                .addPreferredGap(LayoutStyle.RELATED)
+                .add(bComparar)
                 .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -224,7 +217,7 @@ public class ContactEditorUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .add(10, 10, 10)
-                .add(layout.createParallelGroup(GroupLayout.LEADING, false)
+                .add(layout.createParallelGroup(GroupLayout.LEADING)
                     .add(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(jScrollPane2))
                 .add(10, 10, 10))
@@ -234,33 +227,13 @@ public class ContactEditorUI extends javax.swing.JFrame {
                 .add(10, 10, 10)
                 .add(jPanel1, GroupLayout.PREFERRED_SIZE, 190, GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(LayoutStyle.UNRELATED)
-                .add(jScrollPane2, GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                .add(jScrollPane2, GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                 .add(10, 10, 10))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cCresActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cCresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cCresActionPerformed
-
-    private void cDecActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cDecActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cDecActionPerformed
-
-    private void cSelecaoActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cSelecaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cSelecaoActionPerformed
-
-    private void cInsercaoActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cInsercaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cInsercaoActionPerformed
-
-    private void cHeapActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cHeapActionPerformed
-
-    }//GEN-LAST:event_cHeapActionPerformed
 
     private void bCompararActionPerformed(ActionEvent evt) {//GEN-FIRST:event_bCompararActionPerformed
 
@@ -293,13 +266,31 @@ public class ContactEditorUI extends javax.swing.JFrame {
         } catch (Exception e2) {
             JOptionPane.showMessageDialog(null, e2.getMessage());
         }
-
-
     }//GEN-LAST:event_bCompararActionPerformed
+
+    private void cHeapActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cHeapActionPerformed
+
+    }//GEN-LAST:event_cHeapActionPerformed
+
+    private void cInsercaoActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cInsercaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cInsercaoActionPerformed
+
+    private void cSelecaoActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cSelecaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cSelecaoActionPerformed
 
     private void cBolhaActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cBolhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cBolhaActionPerformed
+
+    private void cDecActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cDecActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cDecActionPerformed
+
+    private void cCresActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cCresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cCresActionPerformed
 
     private void cTamVetorActionPerformed(ActionEvent evt) {//GEN-FIRST:event_cTamVetorActionPerformed
         // TODO add your handling code here:
@@ -339,19 +330,18 @@ public class ContactEditorUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private JButton bComparar;
-    public JCheckBox cBolha;
-    public JRadioButton cCres;
-    public JRadioButton cDec;
-    public JCheckBox cHeap;
-    public JCheckBox cInsercao;
+    private JCheckBox cBolha;
+    private JRadioButton cCres;
+    private JRadioButton cDec;
+    private JCheckBox cHeap;
+    private JCheckBox cInsercao;
     private JTextArea cResultado;
-    public JCheckBox cSelecao;
-    public JCheckBox cShell;
-    public JTextField cTamVetor;
+    private JCheckBox cSelecao;
+    private JCheckBox cShell;
+    private JTextField cTamVetor;
     private JLabel jLabel1;
     private JLabel jLabel2;
     private JLabel jLabel3;
-    private JLabel jLabel4;
     private JPanel jPanel1;
     private JScrollPane jScrollPane2;
     public ButtonGroup tipoOrdem;
