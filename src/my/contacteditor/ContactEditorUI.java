@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
@@ -60,11 +61,13 @@ public class ContactEditorUI extends javax.swing.JFrame {
         cShell = new JCheckBox();
         cHeap = new JCheckBox();
         bComparar = new JButton();
+        jLabel4 = new JLabel();
         jScrollPane2 = new JScrollPane();
         cResultado = new JTextArea();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Trabalho BSI3 ");
+        setResizable(false);
         setType(Type.UTILITY);
 
         jPanel1.setBorder(BorderFactory.createTitledBorder("Comparação dos Metodos de Ordenação"));
@@ -138,6 +141,8 @@ public class ContactEditorUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setIcon(new ImageIcon(getClass().getResource("/my/contacteditor/Sem título.png"))); // NOI18N
+
         GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
@@ -145,9 +150,18 @@ public class ContactEditorUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(jLabel1)
-                        .addPreferredGap(LayoutStyle.RELATED)
-                        .add(cTamVetor))
+                        .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
+                            .add(jPanel1Layout.createSequentialGroup()
+                                .add(jLabel1)
+                                .addPreferredGap(LayoutStyle.RELATED)
+                                .add(cTamVetor))
+                            .add(GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .add(cBolha)
+                                .add(18, 18, 18)
+                                .add(cSelecao)
+                                .addPreferredGap(LayoutStyle.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .add(cInsercao)))
+                        .addContainerGap())
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
                             .add(jPanel1Layout.createSequentialGroup()
@@ -156,27 +170,22 @@ public class ContactEditorUI extends javax.swing.JFrame {
                                 .add(cCres)
                                 .addPreferredGap(LayoutStyle.UNRELATED)
                                 .add(cDec, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE))
-                            .add(jLabel3)
-                            .add(jPanel1Layout.createSequentialGroup()
-                                .add(cShell)
-                                .addPreferredGap(LayoutStyle.UNRELATED)
-                                .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
-                                    .add(jPanel1Layout.createSequentialGroup()
-                                        .add(21, 21, 21)
-                                        .add(bComparar))
-                                    .add(cHeap))))
-                        .add(0, 31, Short.MAX_VALUE))
+                            .add(jLabel3))
+                        .add(0, 0, Short.MAX_VALUE))
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(cBolha)
-                        .add(18, 18, 18)
-                        .add(cSelecao)
+                        .add(cShell)
+                        .addPreferredGap(LayoutStyle.UNRELATED)
+                        .add(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
+                            .add(cHeap)
+                            .add(jPanel1Layout.createSequentialGroup()
+                                .add(21, 21, 21)
+                                .add(bComparar)))
                         .addPreferredGap(LayoutStyle.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(cInsercao)))
-                .addContainerGap())
+                        .add(jLabel4))))
         );
         jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
                     .add(jLabel1)
                     .add(cTamVetor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -186,19 +195,22 @@ public class ContactEditorUI extends javax.swing.JFrame {
                     .add(cCres)
                     .add(cDec))
                 .addPreferredGap(LayoutStyle.UNRELATED)
-                .add(jLabel3)
-                .addPreferredGap(LayoutStyle.UNRELATED)
-                .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
-                    .add(cBolha)
-                    .add(cSelecao)
-                    .add(cInsercao))
-                .addPreferredGap(LayoutStyle.UNRELATED)
-                .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
-                    .add(cShell)
-                    .add(cHeap))
-                .addPreferredGap(LayoutStyle.UNRELATED)
-                .add(bComparar)
-                .addContainerGap())
+                .add(jPanel1Layout.createParallelGroup(GroupLayout.TRAILING)
+                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(jLabel3)
+                        .addPreferredGap(LayoutStyle.UNRELATED)
+                        .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
+                            .add(cBolha)
+                            .add(cSelecao)
+                            .add(cInsercao))
+                        .addPreferredGap(LayoutStyle.UNRELATED)
+                        .add(jPanel1Layout.createParallelGroup(GroupLayout.BASELINE)
+                            .add(cShell)
+                            .add(cHeap))
+                        .addPreferredGap(LayoutStyle.RELATED)
+                        .add(bComparar))
+                    .add(jLabel4))
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         cResultado.setEditable(false);
@@ -212,10 +224,10 @@ public class ContactEditorUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .add(10, 10, 10)
-                .add(layout.createParallelGroup(GroupLayout.LEADING)
-                    .add(jScrollPane2, GroupLayout.PREFERRED_SIZE, 308, GroupLayout.PREFERRED_SIZE)
-                    .add(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(GroupLayout.LEADING, false)
+                    .add(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jScrollPane2))
+                .add(10, 10, 10))
         );
         layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
@@ -339,6 +351,7 @@ public class ContactEditorUI extends javax.swing.JFrame {
     private JLabel jLabel1;
     private JLabel jLabel2;
     private JLabel jLabel3;
+    private JLabel jLabel4;
     private JPanel jPanel1;
     private JScrollPane jScrollPane2;
     public ButtonGroup tipoOrdem;
